@@ -1,0 +1,528 @@
+@font-face {
+	font-family: 'CalifornianFB';
+	src: local('CalifornianFB'), url('font/CalifornianFB.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'PRISTINA';
+	src: local('PRISTINA'), url('font/PRISTINA.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Felix Titling';
+	src: url('font/felixtitlingmt.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'The Wedding Signature';
+    src: local('TheWeddingSignature'), url('font/TheWeddingSignature-Regular.woff') format('woff'),
+}
+
+:root {
+    --button: #535748;
+    --shadow: 0 2px 2px rgb(0 0 0 / 0.5);
+    --cali-font: 'CalifornianFB', sans-serif;
+    --pris-font: 'PRISTINA', cursive;
+    --wed-font: 'The Wedding Signature', cursive;
+    --great-font: 'Great Vibes', cursive;
+    --fel-font: 'Felix Titling', sans-serif;
+}
+
+body {
+    font-size: 1.4rem;
+    font-family: var(--cali-font);
+    min-height: 2000px;
+}
+
+/* start music player for soundtrack */
+.music-player {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    border-radius: 100%;
+    display: flex;
+    cursor: pointer;
+    z-index: 1000;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+}
+
+.music-player i {
+    margin: auto;
+    font-size: 4rem;
+    animation: spin 2s linear infinite;
+    color: var(--button);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* end music player for soundtrack */
+
+/* start hero */
+/* background */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("img/kayumanis-56.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter: opacity(70%);
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    padding-top: 4rem;
+}
+
+/* save the date */
+.hero .thedate {
+    margin-bottom: 3rem;
+}
+
+.hero .thedate h2{
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: bolder;
+}
+
+/* hani & bagus */
+.hero .name-container h1 {
+    font-family: var(--wed-font);
+    font-weight: bolder;
+    font-size: 6rem;
+}
+
+.hero .name-item h2,
+.hero .thedate h3  {
+    font-family: var(--wed-font);
+    font-weight: bolder;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.hero .thedate .the {
+    margin-bottom:-1.8rem;
+    font-weight: bolder;
+}
+
+/* date */
+.event-info {
+    max-width: 600px; 
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.event-detail, 
+.event-date, 
+.event-time {
+    flex: 1;
+}
+
+.event-detail p, 
+.event-time p {
+    margin: 0.7rem;
+}
+
+.event-date p {
+    margin: 0;
+}
+
+.event-date h1 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+.line {
+    display: block;
+    width: 9rem;
+    border-bottom: 1px solid black;
+    margin: auto; 
+}
+
+/* button */
+.hero a,
+.info a,
+.rsvp .btn,
+.gift .btn {
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    width: 15rem;
+    background-color: var(--button);
+    padding: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.hero a:hover,
+.info a:hover,
+.rsvp .btn:hover,
+.gift .btn:hover {
+    background: white;
+    color: var(--button);
+}
+
+/* end hero */
+
+/* start home */
+/* .home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/background-3.png);
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+}
+
+.home {
+    position: relative;
+    min-height: 80vh;
+    padding-bottom: 5rem;
+    padding-top: 4rem;
+} */
+
+.home .flow3 img {
+    width: 20%;
+}
+
+/* .home .kayu-10 img,
+.info .kayu-10 img,
+.closing .kayu-10 img,
+.gift .kayu-10 img, */
+.kayu-10 img {
+    width: 100%;
+    display: block;
+    position:relative;
+}
+
+/* .home .kayu-10::after,
+.info .kayu-10::after,
+.closing .kayu-10::after,
+.gift .kayu-10::after, */
+.kayu-10::after  {
+    content: ' ';
+    display: table;
+    clear: both;
+}
+
+.home .kayu-10 .image-top2 {
+    margin-top: -68.5%;
+}
+
+.home .kayu-10 .image-top1 {
+    margin-top: -66%;
+}
+
+.home .kayu-10 .image-bottom {
+    width: 88%;
+    margin-left: 5.5%;
+    margin-top: 15%;
+}
+
+.home .latin {
+    margin-top: 2rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.home .latin p {
+    font-style: italic;
+}
+
+.home .latin h4 {
+    font-weight: bold;
+    font-size: 1rem;
+}
+/* end home */
+
+/* start couple info */
+.couple-info::before,
+/* .gallery::before, */
+.rsvp::before,
+.closing::before {
+/* .gift::before { */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/background-5.png);
+    z-index: -1;
+}
+
+.couple-info,
+/* .gallery, */
+.rsvp,
+.closing {
+/* .gift { */
+    padding-top: 4rem;
+    /* padding-left: 10rem; */
+    position: relative;
+    /* overflow: hidden; */
+    padding-bottom: 4rem;
+    min-height: 100vh;
+}
+
+.couple-info .salam img,
+.closing .salam img {
+    width: 60%;
+}
+
+.couple-info .top p,
+.salam.top p {
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+/* .couple-info .couple img {
+    width: 100%;
+    margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
+} */
+
+.couple-info .foto-hani .kayu-10 .image-top1 {
+    width: 55%;
+    margin-left: 55%;
+    margin-top: -160%;
+}
+
+.couple-info .foto-bagus .kayu-10 .image-top1 {
+    width: 120%;
+    margin-left: -8%;
+    margin-top: -150%;
+}
+
+.couple-info .couple .bfont,
+.couple-info .couple .afont {
+    font-family: var(--wed-font);
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+.couple-info .couple h3 {
+    font-family: var(--pris-font);
+    font-size: 2.5rem;
+}
+
+.couple-info .couple .break {
+    margin-bottom: 3rem;
+}
+
+/* end couple-info */
+
+
+/* start info acara */
+.home, 
+.info, 
+/* .rsvp,  */
+.gift,
+footer {
+/* .closing { */
+    background-color: black;
+    color: white;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.info .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.closing h1,
+.rsvp h2,
+.gift h2 {
+    font-family: var(--wed-font);
+    font-size: 4rem;
+    /* font-weight: bold; */
+}
+
+.info .kayu-10 .image-top1 {
+    width: 15%;
+    margin-left: 25%;
+    margin-top: -5%;
+}
+
+.info .kayu-10 .image-top2 {
+    margin-top: -49%;
+    width: 15%;
+    margin-right: -2%;
+}
+
+/* khusus rsvp */
+.rsvp .card {
+    background-color: var(--button);
+    color: white !important;
+    border-radius: 2rem;
+}
+
+.rsvp h2 {
+    border-bottom: none;
+}
+
+.rsvp img {
+    border-radius: 2rem;
+}
+
+.rsvp .form-control {
+    font-weight: 400;
+    letter-spacing: 1px;
+    height: 30px;
+    padding: 6px 12px;
+    border: 2px solid #e7e7e7;
+    box-shadow: none;
+}
+
+.rsvp #ucapan {
+    height: 100%;
+}
+
+.rsvp .form-control:focus { 
+    box-shadow: 0 0 5px #dcdcdc; 
+}
+
+.table-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 500px; /* Adjust as needed */
+}
+  
+.comments-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Space between rows */
+}
+  
+.comments-table td {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+  
+.comment-author {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+  
+.comment-text {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+  
+.comment-time {
+    color: #777;
+    font-size: 0.85rem;
+}
+  
+/* gift */
+.gift .btn {
+    font-family: var(--fel-font);
+}
+
+.gift .modal-custom {
+    font-style: normal;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: var(--button);
+    color: white;
+}
+
+.gift .kayu-10 .image-bottom1 {
+    margin-left: -7%;
+    width: 56%;
+    margin-top: 6%;  
+}
+
+.gift .kayu-10 .image-bottom2 {
+    margin-left: 44%;
+    width: 55%;
+    margin-top: -55%;
+}
+
+.gift .kayu-10 .image-top1 {
+    margin-top: -58.5%;
+    width: 60%;
+    margin-left: 42.5%;
+}
+
+/* closing */
+.closing .top h1 {
+    font-family: var(--wed-font);
+    font-size: 6rem;
+}
+
+.closing .row h3 {
+    font-family: var(--pris-font);
+    font-size: 2.5rem;
+}
+
+.closing .kayu-10 .image-top1 {
+    width: 70%;
+    margin-left: 15%;
+    margin-top: -100%;
+}
+
+/* footer */
+footer .heart {
+    padding-left:0.5rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* etra large */
+@media (max-width: 1200px) {
+}
+
+/* laptop */
+/* @media (max-width: 992px) {
+    html {
+        font-size: 75%;
+    }
+    
+} */
+
+/* tablet and larger screen*/
+@media (min-width: 768px) {
+    html {
+        font-size: 65%;
+    }
+    
+    /* body {
+        width: 767px;
+    } */
+}
+
+/* phone */
+/* @media (max-width: 576px) {
+    html {
+        font-size: 60%;
+    }
+} */
+
+@media (max-width: 767px) {
+    html {
+        font-size: 60%;
+    }
+}
