@@ -323,7 +323,7 @@
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="status" id="tidak-hadir" value="Tidak Hadir">
                 <label class="form-check-label" for="tidak-hadir">
-                  TIdak hadir
+                  Tidak hadir
                 </label>
               </div>
             </div>
@@ -657,6 +657,7 @@
             body: data,
           })
           .then(() => {
+            fetchData();
             alert("Konfirmasi kehadiran dan ucapan telah berhasil terkirim!");
           })
         });
