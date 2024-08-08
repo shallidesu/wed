@@ -116,7 +116,7 @@
     <!-- couple -->
     <section class="couple-info">
       <div class="container">
-        <div class="row">
+        <div class="row justify-content-center mb-5">
           <div class="salam col-md-8 col-12 text-center mb-2">
             <img src="img/assalamu'alaikum2.png">
           </div>
@@ -143,7 +143,7 @@
               <!-- <div class="col-6 align-content-center mx-auto mb-lg-0 mb-4 order-lg-2 order-1">
                 <img src="img/hani.png" alt="Amirah Razani" class="img-responsive my-auto">
               </div> -->
-              <div class="kayu-10 col-6 align-content-center mx-auto mb-lg-0 mb-4">
+              <div class="kayu-10 col-6 align-content-center mx-auto mb-lg-0 mb-4 order-lg-2 order-1">
                 <div class="image-bottom1 float-start" onclick="openModal();currentSlide(2)">
                   <img src="img/hani.png" alt="Foto Hani">
                 </div>
@@ -153,7 +153,7 @@
               </div>
             </div>
           </div>
-          <div class="break col-lg-2 text-center">
+          <div class="col-lg-2 d-flex mt-auto mb-lg-auto mb-4  justify-content-center">
             <p>dengan</p>
           </div>
           <div class="col-lg-5">
@@ -357,12 +357,12 @@
             <div class="table-container">
               <table class="comments-table">
                 <tbody id="comments-tbody">
-                  <tr>
+                  <!-- <tr>
                     <td>
                       <h4 class="comment-author">A</h4>
                       <p class="comment-text">A</p>
                     </td>
-                  </tr>
+                  </tr> -->
                 </tbody>
               </table>
             </div>
@@ -387,7 +387,34 @@
             <p>Dan jika memberi adalah ungkapan tanda kasih Anda, Anda dapat memberi kado berupa barang maupun <em>cashless</em>.</p>
           </div>
         </div>
-        <div class="row justify-content-center text-center mb-5 p-3">
+        <div class="row justify-content-center my-5">
+        <div class="col-md-5 col-10">
+          <div class="card text-center text-black-50">
+            <div class="card-header">Informasi Tujuan</div>
+            <div class="card-body">
+              <div class="row justify-content-center">
+                <div class="col-md-6">
+                  <p class="mb-0">BCA - AMIRAH RAZANI</p>
+                  <i class="bi bi-copy" onclick="copyToClipboard1()"></i>
+                  <span id="rekBca">4350525675</span>
+                </div>
+
+                <div class="col-md-6">
+                  <p class="mb-0">BNI - BAGUS MUHAMMAD LUQMAN</p>
+                  <i class="bi bi-copy" onclick="copyToClipboard2()"></i>
+                  <span id="rekBni">1220934567</span>
+                </div>
+
+                <div class="row justify-content-center mt-4">
+                  <p class="alamat">ALAMAT TUJUAN: AMIRAH RAZANI
+                    <br> Jl. Tunggul Ametung IIIA No. 11, Denpasar, Bali, 80116. (081238232774)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+        <!-- <div class="row justify-content-center text-center mb-5 p-3">
           <div class="col-md-6">
             <ul class="list-group">
               <li class="list-group-item">
@@ -403,7 +430,7 @@
                 Jl. Tunggul Ametung IIIA No. 11, Denpasar, Bali, 80116. (081238232774)
               </li>
             </ul>
-          </div>
+          </div> -->
 
           <div class="kayu-10 mt-5">
             <div class="image-bottom1 float-start" onclick="openModal();currentSlide(7)">
@@ -681,30 +708,52 @@
           .catch(error => console.error('Error fetching data:', error));
       }
     
-        function showData(dataArray) {
+      function showData(dataArray) {
         const tbody = document.getElementById('comments-tbody');
-        tbody.innerHTML = ''; // Clear previous content
-        
+        tbody.innerHTML = '';
+          
         // Check if dataArray is an array and has data
         if (Array.isArray(dataArray) && dataArray.length > 0) {
           dataArray.forEach((row, index) => {
-            if (index === 0) return; // Skip headers if present
             const tr = document.createElement('tr');
             tr.innerHTML = `
-              <td>
-                <h4 class="comment-author">${row.nama || 'N/A'}</h4>
-                <p class="comment-text">${row.ucapan || 'N/A'}</p>
-              </td>
-            `;
+                <td>
+                  <h4 class="comment-author">${row.nama || 'N/A'}</h4>
+                  <p class="comment-text">${row.ucapan || 'N/A'}</p>
+                </td>
+              `;
             tbody.appendChild(tr);
           });
         } else {
-            console.warn('No data to display.');
+              console.warn('No data to display.');
         }
       }
 
       // Call fetchData when the script loads
       fetchData();
+    </script>
+
+    <!-- copy rek to clipboard -->
+    <script>
+      function copyToClipboard1() {
+        var copyText = document.getElementById("rekBca").textContent;
+
+        navigator.clipboard.writeText(copyText).then(function() {
+          alert("Copied the text: " + copyText);
+        }).catch(function(err) {
+          console.error('Failed to copy: ', err);
+        });
+      }
+
+      function copyToClipboard2() {
+        var copyText = document.getElementById("rekBni").textContent;
+
+        navigator.clipboard.writeText(copyText).then(function() {
+          alert("Copied the text: " + copyText);
+        }).catch(function(err) {
+          console.error('Failed to copy: ', err);
+        });
+      }
     </script>
     
     <!-- modal -->

@@ -125,6 +125,7 @@ body {
 .event-date, 
 .event-time {
     flex: 1;
+    font-weight: bolder;
 }
 
 .event-detail p, 
@@ -281,8 +282,7 @@ body {
     min-height: 100vh;
 }
 
-.couple-info .salam img,
-.closing .salam img {
+.salam img {
     width: 60%;
 }
 
@@ -325,11 +325,6 @@ body {
     font-family: var(--pris-font);
     font-size: 2.5rem;
 }
-
-.couple-info .couple .break {
-    margin-bottom: 3rem;
-}
-
 /* end couple-info */
 
 
@@ -445,16 +440,38 @@ footer {
 }
   
 /* gift */
-.gift .btn {
+/* .gift .btn {
     font-family: var(--fel-font);
-}
+} */
 
-.gift .modal-custom {
+/* .gift .modal-custom {
     font-style: normal;
     padding-top: 2rem;
     padding-bottom: 2rem;
     background-color: var(--button);
     color: white;
+} */
+
+.gift .card {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white !important;
+    border: 1px solid #999;
+    border-radius: 1rem;
+}
+
+.gift .card-header {
+    border-bottom: 1px solid #999;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-style: var(--pris-font);
+}
+
+.gift .card-body {
+    font-size: 1rem;
+}
+
+.gift i {
+    cursor: pointer;
 }
 
 .gift .kayu-10 .image-bottom1 {
@@ -462,12 +479,6 @@ footer {
     width: 56%;
     margin-top: 6%;  
 }
-
-/* .gift .kayu-10 .image-bottom2 {
-    margin-left: 44%;
-    width: 55%;
-    margin-top: -55%;
-} */
 
 .gift .kayu-10 .image-bottom2 {
     margin-left: 44%;
