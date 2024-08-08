@@ -477,24 +477,24 @@ footer {
 .gift .kayu-10 .image-bottom1 {
     margin-left: -7%;
     width: 56%;
-    margin-top: 6%;  
+    margin-top: -57.5%;  
 }
 
 .gift .kayu-10 .image-bottom2 {
     margin-left: 44%;
     width: 55%;
-    margin-top: -55.5%;
+    margin-top: -57%;
 }
 
 .gift .kayu-10 .image-bottom3 {
     margin-left: 44%;
     width: 55%;
-    margin-top: -27%;
+    margin-top: -28.5%;
 }
 
-.gift .kayu-10 .image-top1 {
-    margin-top: -58.7%;
-    width: 60%;
+.gift .kayu-10 .image-bottom0 {
+    /* margin-top: 58.7%; */
+    width: 56%;
     margin-left: 42.5%;
 }
 
