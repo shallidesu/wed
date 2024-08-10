@@ -80,10 +80,10 @@
     <section id="home" class="home">
       <div class="container">
         <div class="row qs justify-content-center text-center">
-          <div class="flow3 col-12 justify-content-center align-content-center">
+          <div class="flow3 col-12 justify-content-center align-content-center scale-up-on-scroll">
             <img src="img/flower3.png">
           </div>
-          <div class="col latin">
+          <div class="col latin scale-up-on-scroll">
             <p>
               Dan di antara tanda-tanda kekuasaan-Nya ialah Dia
               menciptakan untukmu isteri-isteri dari jenismu sendiri,
@@ -97,7 +97,7 @@
           <!-- <div class="kayu-10 d-block justify-content-center align-content-center">
             <img src="img/kayu-10.png">
           </div> -->
-          <div class="kayu-10" onclick="openModal();currentSlide(1)">
+          <div class="kayu-10 scale-up-on-scroll" onclick="openModal();currentSlide(1)">
             <!-- <img src="img/kayu-10.png"> -->
             <div class="image-bottom float-start">
               <img src="img/kayu-10.jpg">
@@ -381,11 +381,12 @@
             <p>karunia yang sangat berarti bagi kami.</p>
             <p>Dan jika memberi adalah ungkapan tanda kasih Anda, Anda dapat memberi kado berupa barang maupun <em>cashless</em>.</p>
           </div>
-
-          <button type="button" class="btn btn-light btn-lg mt-5" id="revealButton">
-            <span><i class="bi bi-gift"></i></span>
-            KLIK DI SINI
-          </button>
+          <div class="col-md-8 col-10 text-center">
+            <button type="button" class="btn btn-light btn-lg mt-5" id="revealButton">
+              <span><i class="bi bi-gift"></i></span>
+              KLIK DI SINI
+            </button>
+          </div>
         </div>
         <div class="row justify-content-center mt-5 scale-up-on-scroll">
           <div class="col-md-5 col-10 mx-auto">
@@ -773,10 +774,6 @@
                     entry.target.classList.remove('show');
                 }
             });
-        });
-
-        fadeInElements.forEach(element => {
-          observer.observe(element);
         });
 
         scaleUpElements.forEach(element => {
