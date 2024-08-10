@@ -683,9 +683,7 @@
         const card = document.getElementById('card-gift');
 
         if (card.classList.contains('show'))
-          setTimeout(() => {
-              card.classList.remove('show');
-          }, 10);
+          card.classList.remove('show');
         else
           card.classList.add('show');
       });
