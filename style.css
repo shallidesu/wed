@@ -34,6 +34,28 @@ body {
     min-height: 2000px;
 }
 
+/* Scale-up animation */
+@keyframes scaleUp {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.scale-up-on-scroll {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.scale-up-on-scroll.show {
+    animation: scaleUp 1.5s ease-out forwards;
+}
+
 /* start music player for soundtrack */
 .music-player {
     position: fixed;
@@ -163,6 +185,10 @@ body {
     background-color: var(--button);
     padding: 0.5rem;
     font-size: 1.2rem;
+}
+
+.gift .btn {
+    font-family: var(--fel-font);
 }
 
 .hero a:hover,
@@ -439,25 +465,24 @@ footer {
     color: #777;
     font-size: 0.85rem;
 }
-  
+
 /* gift */
-/* .gift .btn {
-    font-family: var(--fel-font);
-} */
-
-/* .gift .modal-custom {
-    font-style: normal;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    background-color: var(--button);
-    color: white;
-} */
-
 .gift .card {
+    opacity: 0;
+    max-height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1), max-height 1s cubic-bezier(0.42, 0, 0.58, 1);
     background-color: rgba(255, 255, 255, 0.2);
     color: white !important;
     border: 1px solid #999;
     border-radius: 1rem;
+}
+
+.gift .card.show {
+    visibility: visible;
+    opacity: 1;
+    max-height: 165px;
 }
 
 .gift .card-header {
@@ -468,7 +493,7 @@ footer {
 }
 
 .gift .card-body {
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .gift i {
