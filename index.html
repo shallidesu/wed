@@ -65,7 +65,7 @@
               </div>
             </div>
             
-            <h4 class="mt-4 mb-2">Kepada, Receiver's Name</h4>
+            <h4 class="mt-4 mb-2">Kepada, <span id="penerima"></span></h4>
             <!-- <h4 class="mb-0">Receiver's Name</h4> -->
             <a href="#home" id="undangan" class="btn btn-light btn-lg mb-3 mt-0" onclick="enableScroll()">Buka Undangan</a>
         </main>
@@ -796,6 +796,13 @@
         slides[slideIndex-1].style.display = "block";
         // dots[slideIndex-1].className += " active";
       }
+    </script>
+
+    <!-- param -->
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const nama = urlParams.get('to');
+      document.getElementById("penerima").innerText = nama;
     </script>
   </body>
 </html>
