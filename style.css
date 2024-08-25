@@ -29,7 +29,7 @@
 }
 
 body {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-family: var(--cali-font);
     min-height: 2000px;
 }
@@ -150,11 +150,6 @@ body {
     font-weight: bolder;
 }
 
-.event-detail p, 
-.event-time p {
-    margin: 0.7rem;
-}
-
 .event-date p {
     margin: 0;
 }
@@ -167,7 +162,7 @@ body {
 
 .line {
     display: block;
-    width: 9rem;
+    width: 10rem;
     border-bottom: 1px solid black;
     margin: auto; 
 }
@@ -184,7 +179,6 @@ body {
     width: 15rem;
     background-color: var(--button);
     padding: 0.5rem;
-    font-size: 1.2rem;
 }
 
 .gift .btn {
@@ -275,7 +269,6 @@ body {
 
 .home .latin h4 {
     font-weight: bold;
-    font-size: 1rem;
 }
 /* end home */
 
@@ -341,11 +334,11 @@ body {
     margin-top: -150%;
 }
 
-.couple-info .couple .bfont,
-.couple-info .couple .afont {
+.couple-info .couple span {
     font-family: var(--wed-font);
-    font-weight: bold;
-    font-size: 4rem;
+    font-weight: bolder;
+    font-size: 3rem;
+    margin-right: -0.5rem;
 }
 
 .couple-info .couple h3 {
@@ -377,7 +370,7 @@ footer {
 .rsvp h2,
 .gift h2 {
     font-family: var(--wed-font);
-    font-size: 4rem;
+    font-size: 5rem;
 }
  
 .info .kayu-10 .image-bottom1 {
@@ -493,7 +486,11 @@ footer {
 }
 
 .gift .card-body {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+}
+
+.gift .card-body span {
+    font-size: 1.6rem;
 }
 
 .gift i {
