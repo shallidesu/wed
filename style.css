@@ -336,9 +336,9 @@ body {
 
 .couple-info .couple span {
     font-family: var(--wed-font);
-    font-weight: bolder;
+    font-weight: bold;
     font-size: 3rem;
-    margin-right: -0.5rem;
+    margin-right: -0.4rem;
 }
 
 .couple-info .couple h3 {
@@ -475,7 +475,7 @@ footer {
 .gift .card.show {
     visibility: visible;
     opacity: 1;
-    max-height: 200px;
+    max-height: 210px;
 }
 
 .gift .card-header {
