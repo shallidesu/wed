@@ -337,9 +337,15 @@ body {
 .couple-info .couple span {
     font-family: var(--wed-font);
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-right: -0.4rem;
+    display: inline-block;
 }
+
+.couple-info .couple .move-down {
+    transform: translateY(5px);
+}
+
 
 .couple-info .couple h3 {
     font-family: var(--pris-font);
